@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Gardening and Farming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c5f2d;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #4caf50;
+            background-color: #f1f8f1;
+            border-radius: 5px;
+        }
+        .toggle-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .toggle-btn:hover {
+            background-color: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Introduction to Gardening and Farming</h1>
+
+        <div class="section">
+            <h2>What is Gardening?</h2>
+            <p>Gardening is the practice of cultivating plants in small areas like backyards, balconies, or terraces. It involves growing flowers, vegetables, and herbs for personal use.</p>
+            <button class="toggle-btn" onclick="toggleSection('gardening-details')">Learn More</button>
+            <div id="gardening-details" class="hidden">
+                <h3>Types of Gardening:</h3>
+                <ul>
+                    <li>Container Gardening</li>
+                    <li>Vertical Gardening</li>
+                    <li>Herb Gardening</li>
+                    <li>Flower Gardening</li>
+                    <li>Indoor Gardening</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What is Farming?</h2>
+            <p>Farming involves large-scale production of crops and livestock for commercial or subsistence purposes. It requires more land and specialized knowledge compared to gardening.</p>
+            <button class="toggle-btn" onclick="toggleSection('farming-details')">Learn More</button>
+            <div id="farming-details" class="hidden">
+                <h3>Types of Farming:</h3>
+                <ul>
+                    <li>Crop Farming</li>
+                    <li>Livestock Farming</li>
+                    <li>Organic Farming</li>
+                    <li>Mixed Farming</li>
+                    <li>Agroforestry</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Difference Between Gardening and Farming</h2>
+            <table border="1" width="100%" cellpadding="10">
+                <tr>
+                    <th>Aspect</th>
+                    <th>Gardening</th>
+                    <th>Farming</th>
+                </tr>
+                <tr>
+                    <td>Scale</td>
+                    <td>Small-scale</td>
+                    <td>Large-scale</td>
+                </tr>
+                <tr>
+                    <td>Purpose</td>
+                    <td>Personal use, hobby</td>
+                    <td>Commercial production</td>
+                </tr>
+                <tr>
+                    <td>Tools</td>
+                    <td>Hand tools</td>
+                    <td>Machinery</td>
+                </tr>
+                <tr>
+                    <td>Watering</td>
+                    <td>Manual or small-scale irrigation</td>
+                    <td>Irrigation systems</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Common Elements</h2>
+            <ul>
+                <li>Soil health</li>
+                <li>Watering and sunlight</li>
+                <li>Pest control</li>
+                <li>Plant nutrition</li>
+                <li>Harvesting</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Benefits of Gardening and Farming</h2>
+            <ul>
+                <li><b>Health and Wellbeing:</b> Reduces stress and provides fresh food.</li>
+                <li><b>Environmental Benefits:</b> Improves air quality and reduces soil erosion.</li>
+                <li><b>Economic Benefits:</b> Lowers grocery costs and supports local markets.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

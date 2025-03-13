@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Simulator</title>
+    <link rel="stylesheet" href="game1.css">
+</head>
+<body>
+    <h1>🌾 Farming Simulator 🌾</h1>
+    <p>Coins: <span id="coins">100</span></p>
+    
+    <div id="weather">☀️ Weather: Sunny</div>
+    
+    <div id="farm">
+        <!-- Crops & Animals will be added here dynamically -->
+    </div>
+
+    <div id="store">
+        <h2>🌱 Buy Crops</h2>
+        <button onclick="buySeed('wheat')">Buy Wheat (10 Coins)</button>
+        <button onclick="buySeed('corn')">Buy Corn (15 Coins)</button>
+        <button onclick="buySeed('carrot')">Buy Carrot (20 Coins)</button>
+        
+        <h2>🐄 Buy Animals</h2>
+        <button onclick="buyAnimal('chicken')">Buy Chicken (30 Coins)</button>
+        <button onclick="buyAnimal('cow')">Buy Cow (50 Coins)</button>
+
+        <h2>🏡 Upgrade Farm</h2>
+        <button onclick="expandFarm()">Expand Farm (100 Coins)</button>
+    </div>
+
+    <script src="game1.js"></script>
+</body>
+</html>

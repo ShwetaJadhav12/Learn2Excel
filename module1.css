@@ -1,0 +1,185 @@
+/* Logo Section Styling */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Space between image and text */
+}
+
+.navbar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;  
+}
+
+.navbar .logo-img {
+    height: 5vh; 
+    width: auto;  
+}
+
+.navbar .logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #eae2b7;  
+    margin-left: 1rem;  
+    transition: color 0.4s ease;
+}
+
+.navbar .logo a:hover .logo-text {
+    color: #dfe9e1;  
+}
+
+.navbar .logo a:hover .logo-img {
+    opacity: 0.8;  
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #003049;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #fcfbff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4d03f;
+}
+
+.signup-btn {
+    background: #fca311;
+    color: #003049;
+    padding: 0.5em 1em;
+    border-radius: 0.4rem;
+}
+
+/* Module 1 Section */
+.module1-container {
+    max-width: 1500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.module1-container h2 {
+    font-size: 30px;
+    color: #2c5f2d;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Farming Types */
+.farming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+/* Farming Type Cards */
+.farming-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.farming-card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Title */
+.farming-card h3 {
+    font-size: 20px;
+    color: #3a7d44;
+    margin-bottom: 10px;
+}
+
+/* Scrollable Text */
+.card-content {
+    height: 120px;
+    overflow-y: auto;
+    padding: 5px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Custom Scrollbar */
+.card-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+    background: #3a7d44;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .farming-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .farming-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* Introduction Section */
+.intro-text {
+    font-size: 18px;
+    color: #444;
+    max-width: 1400px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    text-align: center;
+    background: #f8fff4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.quiz-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.quiz-button {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quiz-button:hover {
+    background: #218838;
+}

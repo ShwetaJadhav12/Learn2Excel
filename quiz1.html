@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Quiz</title>
+    <link rel="stylesheet" href="quiz1.css"> <!-- Link your CSS file -->
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <h2>🌾 Farming Quiz 🌱</h2>
+        <p>Test your farming knowledge! Choose the correct answer for each question.</p>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p id="progress-text">Progress: 0%</p>
+
+        <!-- Quiz Questions -->
+        <div class="quiz-box">
+            <p><b>1. What type of farming focuses on growing crops and raising livestock on the same land?</b></p>
+            <input type="radio" name="q1" value="wrong"> Commercial Farming <br>
+            <input type="radio" name="q1" value="correct"> Mixed Farming <br>
+            <input type="radio" name="q1" value="wrong"> Intensive Farming <br>
+            <button onclick="checkAnswer('q1')">Submit</button>
+            <p class="feedback" id="q1-feedback"></p>
+        </div>
+
+        <div class="quiz-box">
+            <p><b>2. Which farming type involves moving livestock to find fresh pastures?</b></p>
+            <input type="radio" name="q2" value="wrong"> Plantation Farming <br>
+            <input type="radio" name="q2" value="correct"> Nomadic Herding <br>
+            <input type="radio" name="q2" value="wrong"> Organic Farming <br>
+            <button onclick="checkAnswer('q2')">Submit</button>
+            <p class="feedback" id="q2-feedback"></p>
+        </div>
+
+        <div class="quiz-box">
+            <p><b>3. What is the main goal of commercial farming?</b></p>
+            <input type="radio" name="q3" value="correct"> Profit-making <br>
+            <input type="radio" name="q3" value="wrong"> Family consumption <br>
+            <input type="radio" name="q3" value="wrong"> Land conservation <br>
+            <button onclick="checkAnswer('q3')">Submit</button>
+            <p class="feedback" id="q3-feedback"></p>
+        </div>
+
+        <div class="quiz-box">
+            <p><b>4. Which farming type is commonly used for crops like tea, coffee, and rubber?</b></p>
+            <input type="radio" name="q4" value="wrong"> Aquaculture <br>
+            <input type="radio" name="q4" value="wrong"> Extensive Farming <br>
+            <input type="radio" name="q4" value="correct"> Plantation Farming <br>
+            <button onclick="checkAnswer('q4')">Submit</button>
+            <p class="feedback" id="q4-feedback"></p>
+        </div>
+
+        <div class="quiz-box">
+            <p><b>5. What is another name for fish farming?</b></p>
+            <input type="radio" name="q5" value="correct"> Aquaculture <br>
+            <input type="radio" name="q5" value="wrong"> Mixed Farming <br>
+            <input type="radio" name="q5" value="wrong"> Intensive Farming <br>
+            <button onclick="checkAnswer('q5')">Submit</button>
+            <p class="feedback" id="q5-feedback"></p>
+        </div>
+
+        <!-- Score and Results Section -->
+        <div class="results">
+            <p id="score-text">Correct Answers: 0% | Incorrect Answers: 0%</p>
+        </div>
+
+        <button class="quiz-button" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <script>
+        let totalQuestions = 5; // Total number of questions
+        let answeredQuestions = 0; // Counter for answered questions
+        let correctAnswers = 0; // Correct answers counter
+        let incorrectAnswers = 0; // Incorrect answers counter
+
+        function checkAnswer(question) {
+            let selected = document.querySelector(`input[name="${question}"]:checked`);
+            let feedback = document.getElementById(`${question}-feedback`);
+
+            if (selected) {
+                if (selected.value === "correct") {
+                    feedback.innerHTML = "✅ Correct!";
+                    feedback.style.color = "green";
+                    correctAnswers++;
+                } else {
+                    feedback.innerHTML = "❌ Wrong! Try again.";
+                    feedback.style.color = "red";
+                    incorrectAnswers++;
+                }
+
+                // Disable further selections for this question
+                let options = document.getElementsByName(question);
+                options.forEach(option => option.disabled = true);
+
+                // Update progress
+                answeredQuestions++;
+                updateProgress();
+            } else {
+                feedback.innerHTML = "⚠️ Please select an answer!";
+                feedback.style.color = "orange";
+            }
+        }
+
+        function updateProgress() {
+            let progressPercent = (answeredQuestions / totalQuestions) * 100;
+            let correctPercent = (correctAnswers / totalQuestions) * 100;
+            let incorrectPercent = (incorrectAnswers / totalQuestions) * 100;
+
+            document.getElementById("progress-bar").style.width = progressPercent + "%";
+            document.getElementById("progress-text").innerText = `Progress: ${progressPercent}%`;
+
+            // Update score display
+            document.getElementById("score-text").innerText = 
+                `Correct Answers: ${correctPercent.toFixed(2)}% | Incorrect Answers: ${incorrectPercent.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gardening and Farming First Aid</title>
+    <link rel="stylesheet" href="first_aid.css">
+</head>
+<body>
+
+<h1>First Aid for Gardening and Farming Injuries</h1>
+
+<div class="card-container">
+
+    <!-- Cuts and Scrapes -->
+    <div class="card" onclick="openModal('cuts')">
+        <div class="card-icon">🩹</div>
+        <div class="card-title">Cuts and Scrapes</div>
+        <div class="card-description">Clean and cover to prevent infection.</div>
+    </div>
+
+    <!-- Insect Bites -->
+    <div class="card" onclick="openModal('bites')">
+        <div class="card-icon">🐝</div>
+        <div class="card-title">Insect Bites</div>
+        <div class="card-description">Reduce swelling and prevent itching.</div>
+    </div>
+
+    <!-- Sunburn -->
+    <div class="card" onclick="openModal('sunburn')">
+        <div class="card-icon">☀️</div>
+        <div class="card-title">Sunburn</div>
+        <div class="card-description">Cool the skin and stay hydrated.</div>
+    </div>
+
+    <!-- Poisonous Plants -->
+    <div class="card" onclick="openModal('plants')">
+        <div class="card-icon">🌿</div>
+        <div class="card-title">Poisonous Plants</div>
+        <div class="card-description">Wash and soothe affected skin.</div>
+    </div>
+
+</div>
+
+<!-- Modal Structure -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <div id="modal-info"></div>
+    </div>
+</div>
+
+<script src="first_aid.js"></script>
+
+</body>
+</html>
