@@ -50,7 +50,6 @@ const questions = [
     let currentQuestionIndex = 0;
     let score = 0;
     let selectedAnswers = Array(questions.length).fill(null);
-    
     const questionEl = document.getElementById('question');
     const optionsEl = document.querySelectorAll('.option');
     const prevBtn = document.getElementById('prev-btn');
