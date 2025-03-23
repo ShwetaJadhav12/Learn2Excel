@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="quiz2.css" />
+  <title>Quiz App</title>
+</head>
+<body>
+
+<div class="quiz-container">
+  <div id="question-container">
+    <h2 id="question">Question text will appear here</h2>
+    <div id="options-container">
+      <button class="option" onclick="selectOption(0)"></button>
+      <button class="option" onclick="selectOption(1)"></button>
+      <button class="option" onclick="selectOption(2)"></button>
+      <button class="option" onclick="selectOption(3)"></button>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+    <button id="next-btn" onclick="nextQuestion()">Next</button>
+    <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Submit</button>
+  </div>
+  
+  <div id="result-container" style="display: none;"></div>
+</div>
+
+<script src="quiz2.js"></script>
+</body>
+</html>
