@@ -1,39 +1,46 @@
 /* Logo Section Styling */
+main{
+    background-color: #f5fff0;
+}
+body{
+    background-color: #f5fff0;
+
+}
 .navbar .logo {
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Space between image and text */
+    gap: 1.5rem;
 }
 
 .navbar .logo a {
     display: flex;
     align-items: center;
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 .navbar .logo-img {
-    height: 5vh; 
-    width: auto;  
+    height: 5vh;
+    width: auto;
 }
 
 .navbar .logo-text {
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #eae2b7;  
-    margin-left: 1rem;  
+    color: #eae2b7;
+    margin-left: 1rem;
     transition: color 0.4s ease;
 }
 
 .navbar .logo a:hover .logo-text {
-    color: #dfe9e1;  
+    color: #dfe9e1;
 }
 
 .navbar .logo a:hover .logo-img {
-    opacity: 0.8;  
+    opacity: 0.8;
 }
 
-/* Navbar */
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -64,122 +71,404 @@
     color: #003049;
     padding: 0.5em 1em;
     border-radius: 0.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #ffba49;
 }
 
 /* Module 1 Section */
 .module1-container {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 50px auto;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
 }
 
 .module1-container h2 {
     font-size: 30px;
     color: #2c5f2d;
-    margin-bottom: 20px;
+    margin-bottom: 12px; /* Reduced gap for better alignment */
 }
 
-/* Grid Layout for Farming Types */
-.farming-grid {
+.module1-container p {
+    margin-top: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Intro Section Styling */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-section h1 {
+    font-size: 36px;
+    color: #003049;
+    margin-bottom: 8px; /* Improved alignment with paragraph */
+}
+
+.intro-section p {
+    margin-top: 4px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.intro-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Farming Grid Layout */
+.farming-grid,.gardening-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Farming Type Cards */
-.farming-card {
-    background: #fff;
+/* Farming Card Styling */
+.farming-card,.gardening-card {
+    background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
-    height: 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 20px;
+    transition: transform 0.3s ease;
 }
 
-.farming-card:hover {
-    transform: scale(1.05);
+.farming-card:hover , .gardening-card:hover {
+    transform: translateY(-5px);
 }
 
-/* Card Title */
-.farming-card h3 {
+.farming-card h3 ,.gardening-card h3 {
     font-size: 20px;
     color: #3a7d44;
     margin-bottom: 10px;
 }
 
-/* Scrollable Text */
-.card-content {
-    height: 120px;
-    overflow-y: auto;
-    padding: 5px;
-    text-align: left;
+.farming-card p ,.gardening-card p{
     font-size: 16px;
+    color: #333;
 }
 
-/* Custom Scrollbar */
-.card-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-.card-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.card-content::-webkit-scrollbar-thumb {
-    background: #3a7d44;
-    border-radius: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
-    .farming-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .farming-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-/* Introduction Section */
-.intro-text {
-    font-size: 18px;
-    color: #444;
-    max-width: 1400px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
-    text-align: center;
-    background: #f8fff4;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+/* Quiz Button */
 .quiz-container {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .quiz-button {
-    display: inline-block;
-    background: #28a745;
-    color: white;
-    padding: 12px 20px;
-    font-size: 18px;
+    background-color: #fca311;
+    color: #003049;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 5px;
+    font-size: 18px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .quiz-button:hover {
-    background: #218838;
+    background-color: #ffba49;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 10px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text,
+    .intro-image {
+        max-width: 100%;
+    }
+
+    .farming-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Differences Section */
+#differences {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#differences h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.differences-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.difference-card {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.difference-card h3 {
+    font-size: 22px;
+    color: #3a7d44;
+    margin-bottom: 10px;
+}
+
+.difference-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.difference-card li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Benefits Section */
+#benefits {
+    padding: 40px 20px;
+    background-color: #f5fff0;
+}
+
+#benefits h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.benefit-card {
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.benefit-card h3 {
+    font-size: 22px;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+.benefit-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.benefit-card li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .differences-container,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .difference-card,
+    .benefit-card {
+        width: 100%;
+    }
+}
+/* General animation for headings */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply to headings */
+h2, h3 {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* For specific headings */
+h2 {
+    animation: slideInLeft 1s ease forwards;
+}
+
+h3 {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+/* Add delay for a more natural effect */
+.farming-card:nth-child(odd) h3,
+.gardening-card:nth-child(odd) h3 {
+    animation-delay: 0.2s;
+}
+
+.farming-card:nth-child(even) h3,
+.gardening-card:nth-child(even) h3 {
+    animation-delay: 0.4s;
+}
+
+/* Smooth hover effect for quiz button */
+.quiz-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quiz-button:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+/* Footer fade-in effect */
+footer {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+/* General animation styles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Initial state before animation */
+.section-heading {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Class added when in view */
+.section-heading.show {
+    animation: fadeInUp 0.8s forwards;
+}
+/* Footer */
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 8px; /* Adjust padding as needed */
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ff7a18;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

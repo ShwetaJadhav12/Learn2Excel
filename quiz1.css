@@ -1,5 +1,81 @@
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo-img {
+    height: 5vh;
+    width: auto;
+}
+
+.navbar .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #eae2b7;
+    margin-left: 1rem;
+    transition: color 0.4s ease;
+}
+
+.navbar .logo a:hover .logo-text {
+    color: #dfe9e1;
+}
+
+.navbar .logo a:hover .logo-img {
+    opacity: 0.8;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em; /* Reduced padding to decrease height */
+    background-color: #003049;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    color: #fcfbff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4d03f;
+}
+
+.signup-btn {
+    background: #fca311;
+    color: #003049;
+    padding: 0.5em 1em;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #ffba49;
+}
+
 .quiz-wrapper {
-    max-width: 600px;
+    max-width: 600vh;
     margin: auto;
     text-align: center;
     padding: 20px;
@@ -50,4 +126,45 @@
 
 .quiz-button:hover {
     background: #218838;
+}
+.logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #eae2b7;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 1s ease forwards, colorChange 2s infinite alternate;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Color change animation */
+@keyframes colorChange {
+    from {
+        color: #eae2b7;
+    }
+    to {
+        color: #f4d03f;
+    }
+}
+
+/* Hover effect with transition */
+.logo a:hover .logo-text {
+    color: #ffba49;
+    transform: scale(1.1);
 }

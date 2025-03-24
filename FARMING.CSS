@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 0.9;
+    line-height: 1.5;
     color: #333;
 }
 
@@ -15,35 +15,35 @@ body {
 .navbar .logo {
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Space between image and text */
+    gap: 1.5rem;
 }
 
 .navbar .logo a {
     display: flex;
     align-items: center;
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 .navbar .logo-img {
-    height: 5vh; 
-    width: auto;  
+    height: 5vh;
+    width: auto;
 }
 
 .navbar .logo-text {
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #eae2b7;  
-    margin-left: 1rem;  
+    color: #eae2b7;
+    margin-left: 1rem;
     transition: color 0.4s ease;
 }
 
 .navbar .logo a:hover .logo-text {
-    color: #dfe9e1;  
+    color: #dfe9e1;
 }
 
 .navbar .logo a:hover .logo-img {
-    opacity: 0.8;  
+    opacity: 0.8;
 }
 
 /* Navbar */
@@ -77,13 +77,11 @@ body {
     color: #003049;
     padding: 0.5em 1em;
     border-radius: 0.4rem;
+    transition: background 0.3s ease;
 }
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+.signup-btn:hover {
+    background: #f28b0c;
 }
 
 /* Top Banner */
@@ -92,7 +90,7 @@ body {
     height: 100vh;
     background-image: url('bg2.jpg');
     background-size: cover;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
     background-position: center;
     display: flex;
     align-items: center;
@@ -100,12 +98,9 @@ body {
     text-align: center;
 }
 
-
-
-
 .banner-overlay {
     color: rgb(14, 73, 25);
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     padding: 2vh;
     border-radius: 2vh;
 }
@@ -120,7 +115,7 @@ body {
     font-size: 2.5rem;
 }
 
-/* Intro Section (Before Modules) */
+/* Intro Section */
 .intro-section {
     display: flex;
     justify-content: space-between;
@@ -187,20 +182,15 @@ body {
     gap: 20px;
     justify-content: center;
 }
-#tagline{
-    color: #021c0c;
-}
-#q{
-    line-height: 3rem;
-}
-#module_heading{
+
+#module_heading {
     color: #093629;
 }
 
 .module {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(100% - 40px);
     max-width: 600px;
     overflow: hidden;
@@ -208,14 +198,8 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.module img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 .module h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #147358;
     margin: 15px;
 }
@@ -227,10 +211,36 @@ body {
 }
 
 .module:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
-/* Interactive tools section */
+
+/* Module Links */
+#module1 {
+    text-decoration: none;
+    color: #147358;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+#module1:hover {
+    color: #4CAF50;
+}
+
+#module2 {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#module2:hover {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+/* Interactive Tools Section */
 .interactive-tools {
     padding: 50px 20px;
     text-align: center;
@@ -267,7 +277,108 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-#module1{
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .intro-images {
+        margin-right: 0;
+        max-width: 70%;
+    }
+
+    .module h3 {
+        font-size: 1.4rem;
+    }
+
+    .module p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-overlay h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-overlay p {
+        font-size: 1.5rem;
+    }
+
+    .intro-text h2 {
+        font-size: 2rem;
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+    }
+
+    .module h3 {
+        font-size: 1.2rem;
+    }
+
+    .module p {
+        font-size: 0.9rem;
+    }
+}
+h3{
+    color: #033408;
     text-decoration: none;
-    color: #147358;
+}
+a{
+    color:#147358;
+    text-decoration: none;
+}
+
+.module a {
+    display: block;
+    color: inherit; /* Keep the text color consistent */
+}
+
+.module img, 
+.module h3, 
+.module p {
+    pointer-events: none; /* Prevent internal elements from intercepting the click */
+}
+
+
+
+.module {
+    position: relative;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+.module a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.completion-tick {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 24px;
+    color: green;
+    display: none; /* Hidden initially */
+}
+
+.module.completed {
+    border-color: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.module.completed .completion-tick {
+    display: inline;
 }
