@@ -38,6 +38,7 @@ ul li {
 
 .intro-text {
     width: 55%; /* Adjusts text width */
+    text-height:3rem
 }
 
 .image-container {
