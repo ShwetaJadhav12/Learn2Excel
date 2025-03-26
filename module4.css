@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #c3ecc3;
     margin: 0;
     padding: 20px;
 }
@@ -10,7 +10,6 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #28a745;
 }
 h1, h2, h3, h4 {
     color: #2c3e50;
@@ -19,7 +18,7 @@ h1, h2, h3, h4 {
     color: #28a745;
 }
 .card h3 {
-    color: #007bff;
+    color: #1f989a;
 }
 ul {
     padding-left: 20px;
@@ -33,16 +32,20 @@ ul li {
     justify-content: space-between; /* Adds spacing */
     max-width: 1200px; /* Limits width */
     margin: 0 auto; /* Centers content */
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .intro-text {
-    width: 55%; /* Adjusts text width */
+    width: 90%; /* Adjusts text width */
     line-height:1.5rem;
+}
+.intro-text h2{
+    color: #301b06;
+   
 }
 
 .image-container {
-    width: 50%; /* Adjusts image width */
+    width: 60%; /* Adjusts image width */
     margin-left: 12rem;
 }
 
@@ -123,4 +126,87 @@ ul li {
 
 .signup-btn:hover {
     background-color: #ffba49;
+}
+
+.section_heading{
+    color: #301b06;
+    padding-left: 1rem;
+}
+.sub_heading{
+    color: #c75e18;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.card_heading{
+    color: #0c311a;
+    font-size:1.5rem ;
+    font-weight: bold;
+
+}
+h1, h2 {
+    color: #2c3e50;
+}
+h3 {
+    color: #0e6029;
+}
+.adv-disadv-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+.adv-card, .disadv-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz Button */
+.quiz-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quiz-button {
+    background-color: #fca311;
+    color: #003049;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+    background-color: #ffba49;
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 8px; /* Adjust padding as needed */
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ff7a18;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+h4{
+    color: #24372b;
+    
+}
+.spacing p{
+    color: #160202;
+}
+.spacing h4{
+    color: #c75e18;
 }
