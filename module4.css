@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #28a745;
+}
+h1, h2, h3, h4 {
+    color: #2c3e50;
+}
+.card h2 {
+    color: #28a745;
+}
+.card h3 {
+    color: #007bff;
+}
+ul {
+    padding-left: 20px;
+}
+ul li {
+    margin-bottom: 8px;
+}
+.intro-container {
+    display: flex;
+    align-items: center;  /* Aligns text and image in a row */
+    justify-content: space-between; /* Adds spacing */
+    max-width: 1200px; /* Limits width */
+    margin: 0 auto; /* Centers content */
+    padding: 20px;
+}
+
+.intro-text {
+    width: 55%; /* Adjusts text width */
+}
+
+.image-container {
+    width: 40%; /* Adjusts image width */
+}
+
+.image-container img {
+    width: 70%; /* Makes the image responsive */
+    height: 10rem;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo-img {
+    height: 5vh;
+    width: auto;
+}
+
+.navbar .logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #eae2b7;
+    margin-left: 1rem;
+    transition: color 0.4s ease;
+}
+
+.navbar .logo a:hover .logo-text {
+    color: #dfe9e1;
+}
+
+.navbar .logo a:hover .logo-img {
+    opacity: 0.8;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #003049;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #fcfbff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4d03f;
+}
+
+.signup-btn {
+    background: #fca311;
+    color: #003049;
+    padding: 0.5em 1em;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #ffba49;
+}
