@@ -33,21 +33,22 @@ ul li {
     justify-content: space-between; /* Adds spacing */
     max-width: 1200px; /* Limits width */
     margin: 0 auto; /* Centers content */
-    padding: 20px;
+    padding: 2rem;
 }
 
 .intro-text {
     width: 55%; /* Adjusts text width */
-    text-height:3rem
+    line-height:1.5rem;
 }
 
 .image-container {
-    width: 40%; /* Adjusts image width */
+    width: 50%; /* Adjusts image width */
+    margin-left: 12rem;
 }
 
 .image-container img {
     width: 70%; /* Makes the image responsive */
-    height: 10rem;
+    height: 12rem;
     border-radius: 10px; /* Optional: Adds rounded corners */
 }
 .navbar .logo {
