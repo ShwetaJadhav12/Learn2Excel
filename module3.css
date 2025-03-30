@@ -1,164 +1,262 @@
- /* General Styling */
- body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
+** {
   margin: 0;
   padding: 0;
-  color: #333;
 }
 
-/* Header */
-header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Progress Bar */
-.progress-container {
-  width: 100%;
-  height: 6px;
-  background-color: #ddd;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em 2em;  
+  background-color: #003049;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
-.progress-bar {
-  height: 6px;
-  background-color: #4CAF50;
-  width: 0;
-  transition: width 0.2s ease;
-}
-
-/* Navigation Bar */
-nav {
-  background-color: #333;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 900;
-}
-
-nav a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #4CAF50;
-}
-
-/* Table of Contents */
-.toc {
-  position: fixed;
-  top: 60px;
-  left: 20px;
-  background-color: #ffffff;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 240px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 900;
-}
-
-.toc h2 {
-  font-size: 18px;
-  margin-top: 0;
-}
-
-.toc ul {
-  list-style: none;
-  padding: 0;
-}
-
-.toc li {
+/* Logo Section Styling */
+.navbar .logo {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  gap: 1.5rem;
 }
 
-.toc input[type="checkbox"] {
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.toc a {
+.navbar .logo a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #4CAF50;
-  transition: color 0.3s;
 }
 
-.toc a:hover,
-.toc a.active {
-  color: #388E3C;
+.navbar .logo-img {
+  height: 5vh;
+  width: auto;
+}
+
+.navbar .logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #eae2b7;
+  margin-left: 1rem;
+  transition: color 0.4s ease;
+}
+
+.navbar .logo a:hover .logo-text {
+  color: #dfe9e1;
+}
+
+.navbar .logo a:hover .logo-img {
+  opacity: 0.8;
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
   font-weight: bold;
 }
 
-/* Main Content */
-.container {
-  margin-left: 280px;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
+.nav-links a {
+  color: #fcfbff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Section Styling */
-.content-section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.nav-links a:hover {
+  color: #f4d03f;
 }
 
-h1, h2, h3 {
-  color: #4CAF50;
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 5px;
+/* Sign Up Button */
+.signup-btn {
+  background: #fca311;
+  color: #003049;
+  padding: 0.5em 1.5em;
+  border-radius: 0.4rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-btn:hover {
+  background: #f28b0c;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a5d1b6;
+  margin: 0;
+  padding-top: 60px; /* Added to prevent content from being hidden under the fixed navbar */
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
   margin-bottom: 20px;
 }
 
-p, ul, li {
-  line-height: 1.8;
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Button Styling */
-.btn-primary {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  font-size: 16px;
+/* .card:hover {
+  transform: scale(1.05);
+} */
+
+h2 {
+  color: #4d290f;
+  font-size: 1.8rem;
 }
 
-.btn-primary:hover {
-  background-color: #b2d5b4;
+h3 {
+  color: #1f989a;
+  font-size: 1.5rem;
 }
 
-/* Footer */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 footer {
+  text-align: center;
   background-color: #333;
   color: white;
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ff7a18;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .card {
+      margin: 10px 0;
+  }
+}
+@media (max-width: 868px) {
+  .navbar {
+    padding: 0.5em;
+  }
+
+  /* Hide nav links on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #003049;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Show links when navbar is toggled */
+  .navbar.active .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 1em;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    color: #fcfbff;
+    font-size: 2rem;
+    background: none;
+    border: none;
+  }
+
+  /* Adjust the Sign Up Button */
+  .signup-btn {
+    padding: 0.5em 1.2em;
+    font-size: 1rem;
+  }
+}
+
+/* Hamburger Icon (visible on mobile) */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 868px) {
+  .hamburger {
+    display: block;
+  }
+}
+/* Quiz Button */
+.quiz-container {
   text-align: center;
-  padding: 15px;
   margin-top: 20px;
+}
+
+.quiz-button {
+  background-color: #fca311;
+  color: #003049;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #ffba49;
 }
