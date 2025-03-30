@@ -1,77 +1,104 @@
-// const mysql = require("mysql2");
-
-// const db = mysql.createConnection({
-//     host: "localhost",  // Change if using a remote database
-//     user: "root",       // Your MySQL username
-//     password: "",       // Your MySQL password
-//     database: "quiz_app", // Database name you created
-// });
-
-// // Connect to MySQL
-// db.connect((err) => {
-//     if (err) {
-//         console.error("Database connection failed:", err);
-//     } else {
-//         console.log("Connected to MySQL Database");
-//     }
-// });
-
-// module.exports = db; // Export the connection for use in other files
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const db = require("./db"); // Import MySQL connection
+const express = require('express');
+const mysql = require('mysql2');
+const cors = require('cors');
 
 const app = express();
+app.use(express.json());
 app.use(cors());
-app.use(bodyParser.json());
 
-app.post("/save-progress", (req, res) => {
+// Database connection using connection pool (better performance)
+const db = mysql.createPool({
+    host: 'localhost', 
+    user: 'root', 
+    password: "shweta@12", 
+    database: 'quiz_app',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+// Check database connection
+db.getConnection((err, connection) => {
+    if (err) {
+        console.error('❌ Database connection failed:', err);
+    } else {
+        console.log('✅ Connected to MySQL database');
+        connection.release();
+    }
+});
+
+// API to save quiz progress
+app.post('/save-progress', (req, res) => {
     const { user_id, current_question, selected_answers } = req.body;
-    
+
+    if (!user_id || current_question === undefined || !selected_answers) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+
     const query = `
-        INSERT INTO user_progress (user_id, current_question, selected_answers)
+        INSERT INTO quiz_progress (user_id, current_question, selected_answers)
         VALUES (?, ?, ?)
         ON DUPLICATE KEY UPDATE current_question = VALUES(current_question), selected_answers = VALUES(selected_answers)
     `;
 
-    db.query(query, [user_id, current_question, JSON.stringify(selected_answers)], (err) => {
-        if (err) return res.status(500).send(err);
-        res.send({ message: "Progress saved successfully" });
-    });
-});
-app.get("/get-progress/:user_id", (req, res) => {
-    const { user_id } = req.params;
-    const query = "SELECT current_question, selected_answers FROM user_progress WHERE user_id = ?";
-
-    db.query(query, [user_id], (err, results) => {
-        if (err) return res.status(500).send(err);
-        if (results.length > 0) {
-            res.send(results[0]);
-        } else {
-            res.send({ current_question: 0, selected_answers: [] });
+    db.query(query, [user_id, current_question, JSON.stringify(selected_answers)], (err, result) => {
+        if (err) {
+            console.error('❌ Error saving progress:', err);
+            return res.status(500).json({ error: 'Failed to save quiz progress' });
         }
+        res.json({ message: '✅ Quiz progress saved successfully' });
     });
 });
-app.post("/save-history", (req, res) => {
-    const { user_id, score, total_questions, answers } = req.body;
-    
-    const query = `
-        INSERT INTO quiz_history (user_id, score, total_questions, answers)
-        VALUES (?, ?, ?, ?)
-    `;
 
-    db.query(query, [user_id, score, total_questions, JSON.stringify(answers)], (err) => {
-        if (err) return res.status(500).send(err);
-        res.send({ message: "History saved successfully" });
-    });
-});
-app.get("/get-history/:user_id", (req, res) => {
+// API to get quiz progress
+app.get('/get-progress/:user_id', (req, res) => {
     const { user_id } = req.params;
-    const query = "SELECT * FROM quiz_history WHERE user_id = ? ORDER BY timestamp DESC";
 
+    const query = 'SELECT * FROM quiz_progress WHERE user_id = ?';
     db.query(query, [user_id], (err, results) => {
-        if (err) return res.status(500).send(err);
-        res.send(results);
+        if (err) {
+            console.error('❌ Error fetching progress:', err);
+            return res.status(500).json({ error: 'Failed to fetch quiz progress' });
+        }
+        res.json(results.length > 0 ? results[0] : null);
     });
 });
+
+// API to save quiz history
+app.post('/save-history', (req, res) => {
+    const { user_id, score, total_questions, answers } = req.body;
+
+    if (!user_id || score === undefined || !total_questions) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+
+    const query = 'INSERT INTO quiz_history (user_id, score, total_questions, answers) VALUES (?, ?, ?, ?)';
+    
+    db.query(query, [user_id, score, total_questions, JSON.stringify(answers)], (err, result) => {
+        if (err) {
+            console.error('❌ Error inserting quiz history:', err);
+            return res.status(500).json({ error: 'Failed to save quiz history' });
+        }
+        res.json({ message: '✅ Quiz history saved successfully', id: result.insertId });
+    });
+});
+
+// API to fetch quiz history
+app.get('/get-history/:user_id', (req, res) => {
+    const { user_id } = req.params;
+
+    const query = 'SELECT * FROM quiz_history WHERE user_id = ? ORDER BY timestamp DESC';
+    db.query(query, [user_id], (err, results) => {
+        if (err) {
+            console.error('❌ Error fetching history:', err);
+            return res.status(500).json({ error: 'Failed to fetch quiz history' });
+        }
+        res.json(results);
+    });
+});
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+
+// Start the server
+// app.listen(5000, () => console.log('🚀 Server running on port 5000'));
