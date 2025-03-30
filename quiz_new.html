@@ -23,10 +23,14 @@
     <button id="prev-btn" onclick="prevQuestion()">Previous</button>
     <button id="next-btn" onclick="nextQuestion()">Next</button>
     <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Submit</button>
-  </div>
-  
-  <div id="result-container" style="display: none;"></div>
+    <button id="history-btn" onclick="fetchHistory()">History</button>
 </div>
+
+<div id="history-container" style="display: none;">
+    <h3>Quiz History</h3>
+    <ul id="history-list"></ul>
+</div>
+
 
 <script src="quiz_new.js"></script>
 </body>
