@@ -36,7 +36,7 @@ app.post('/save-progress', (req, res) => {
     }
 
     const query = `
-        INSERT INTO quiz_progress (user_id, current_question, selected_answers)
+        INSERT INTO quiz_progress1 (user_id, current_question, selected_answers)
         VALUES (?, ?, ?)
         ON DUPLICATE KEY UPDATE current_question = VALUES(current_question), selected_answers = VALUES(selected_answers)
     `;
@@ -96,6 +96,19 @@ app.get('/get-history/:user_id', (req, res) => {
         res.json(results);
     });
 });
+
+app.post("/reset-progress", async (req, res) => {
+    const { user_id } = req.body;
+
+    try {
+        await db.query("UPDATE progress SET current_question = 0, selected_answers = '[]' WHERE user_id = ?", [user_id]);
+        res.json({ success: true, message: "Quiz progress reset!" });
+    } catch (error) {
+        console.error("Error resetting progress:", error);
+        res.status(500).json({ success: false, message: "Failed to reset progress" });
+    }
+});
+
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 

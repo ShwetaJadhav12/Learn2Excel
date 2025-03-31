@@ -109,4 +109,155 @@ body::before {
     border-radius: 4px;
     background-color: #fafafa;
   }
+  #history-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
   
+  #history-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  #history-container {
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  
+  .correct-answer {
+    color: green;
+    font-weight: bold;
+  }
+  #close-results-btn {
+    background-color: #ff4d4d; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background 0.3s ease;
+}
+
+#close-results-btn:hover {
+    background-color: #cc0000; /* Darker red */
+}
+#close-history-btn {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.3s ease;
+}
+
+#close-history-btn:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+.history-score-btn {
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  width: 100%;
+  transition: background 0.3s ease;
+  text-align: left;
+}
+
+.history-score-btn:hover {
+  background-color: #218838; /* Darker Green */
+}
+
+#progress-container {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+.progress-item {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.correct {
+  background-color: #d4edda; /* Light green */
+  border-left: 5px solid #28a745;
+}
+
+.wrong {
+  background-color: #f8d7da; /* Light red */
+  border-left: 5px solid #dc3545;
+}
+
+#close-progress-btn, #close-history-btn {
+  background-color: #dc3545; /* Red */
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.3s ease;
+}
+
+#close-progress-btn:hover, #close-history-btn:hover {
+  background-color: #c82333; /* Darker red */
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#reset-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: darkred;
+}
