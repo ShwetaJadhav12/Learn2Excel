@@ -117,7 +117,7 @@ function prevQuestion() {
 // Save quiz progress in the database
 async function saveProgress() {
     try {
-        await fetch("http://localhost:5000/save-progress", {
+        await fetch("http://localhost:5001/save-progress", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -137,7 +137,7 @@ async function fetchHistory() {
     historyList.innerHTML = "";
 
     try {
-        const response = await fetch(`http://localhost:5000/get-history/${user_id}`);
+        const response = await fetch(`http://localhost:5001/get-history/${user_id}`);
         const history = await response.json();
 
         if (history.length === 0) {
@@ -189,7 +189,7 @@ submitBtn.addEventListener("click", submitQuiz);
 // Save quiz history in the database
 async function saveHistory(score) {
     try {
-        const response = await fetch("http://localhost:5000/save-history", {
+        const response = await fetch("http://localhost:5001/save-history", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
