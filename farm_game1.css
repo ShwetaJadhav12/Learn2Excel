@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5dc;
+}
+
+h1 {
+    color: #2c5e1a;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.items, .drop-zones {
+    width: 40%;
+}
+
+.draggable {
+    background-color: #ffeb99;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: grab;
+    display: inline-block;
+}
+
+.drop-zone {
+    border: 2px dashed #555;
+    background-color: #fff;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    min-height: 50px;
+}
+
+.dragging {
+    opacity: 0.5;
+}
