@@ -8,25 +8,27 @@
 </head>
 <body>
     
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-              <a href="#">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
                 <img class="logo-img" src="logo.png" alt="Logo">
                 <span class="logo-text">Learn2Excel</span>
-              </a>
-            </div>
-            <ul class="nav-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <button class="signup-btn">Sign Up</button>
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-          </nav>
-    </header>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    
+        <!-- User Info Section -->
+        <div id="nav-user">
+            <button class="signup-btn" id="signup-btn">Sign Up</button>
+        </div>
+    
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
     <!-- Top Banner with Parallax Effect -->
     <div class="top-banner">
         <div class="banner-overlay">
@@ -123,9 +125,9 @@
                 </div>
                 
                 <div class="module">
-                    <a href="module10.html">
-                        <h3>10. Sustainable and Eco-Friendly Practices</h3>
-                        <p>Learn about organic farming, mulching, and natural pest control methods.</p>
+                    <a href="firstaid.html">
+                        <h3>Essential First Aid Tips</h3>  
+    <p>Learn life-saving first aid techniques, emergency response strategies, and basic medical care.</p>  
                     </a>
                 </div>
                 
@@ -136,14 +138,19 @@
         <section class="interactive-tools">
             <h2>Interactive Tools</h2>
             <div class="tool">
-                <h3>Game 1</h3>
+                <a href="farm_game1.html">
+                    <h3>Game 1</h3>
+                </a>
                 <p></p>
             </div>
             <div class="tool">
-                <h3>Game 2</h3>
+                <a href="gard_game2.html">
+                    <h3>Game 2</h3>
+                </a>
                 <p></p>
             </div>
         </section>
+        
     </main>
 
     <!-- Footer -->

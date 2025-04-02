@@ -240,26 +240,7 @@ body {
     cursor: pointer;
 }
 
-/* Interactive Tools Section */
-.interactive-tools {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fefefe;
-}
 
-.interactive-tools h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.tool {
-    background-color: #043827;
-    color: #f8f1e9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(220, 218, 218, 0.919);
-    margin: 20px;
-}
 
 /* Footer */
 footer {
@@ -330,7 +311,7 @@ footer a:hover {
     }
 }
 h3{
-    color: #033408;
+    color: #a8c7ab;
     text-decoration: none;
 }
 a{
@@ -555,4 +536,50 @@ a{
         border: none;
         color: white;
     }
+}
+
+/* Interactive Tools Section */
+.interactive-tools {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fefefe;
+}
+
+.interactive-tools h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.tool {
+    background-color: #043827;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(220, 218, 218, 0.919);
+    margin: 20px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #c8e6c9;
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
 }

@@ -20,8 +20,12 @@
   "homepage": "https://github.com/ShwetaJadhav12/Learn2Excel#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1",
     "mysql2": "^3.14.0"
   },
   "devDependencies": {
