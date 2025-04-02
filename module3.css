@@ -3,89 +3,119 @@
   padding: 0;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.2em 2em;  
-  background-color: #003049;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    background-color: #003049;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo Section */
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navbar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #eae2b7;
+  }
+  
+  .navbar .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .navbar .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+  }
+  
+  .navbar .logo a:hover .logo-text {
+    color: #dfe9e1;
+  }
+  
+  /* Navbar Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2em;
+  }
+  
+  .nav-links a {
+    color: #fcfbff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #f4d03f;
+  }
+  
+  /* Signup Button */
+  .signup-btn {
+    background: #fca311;
+    color: #003049;
+    padding: 0.5em 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background: #f28b0c;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fcfbff;
+    cursor: pointer;
+  }
+  @media (max-width: 868px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #003049;
+        width: 100%;
+        text-align: center;
+    }
 
-/* Logo Section Styling */
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+    .nav-links.active {
+        display: flex;
+    }
 
-.navbar .logo a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.navbar .logo-img {
-  height: 5vh;
-  width: auto;
-}
-
-.navbar .logo-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #eae2b7;
-  margin-left: 1rem;
-  transition: color 0.4s ease;
-}
-
-.navbar .logo a:hover .logo-text {
-  color: #dfe9e1;
-}
-
-.navbar .logo a:hover .logo-img {
-  opacity: 0.8;
-}
-
-/* Navbar Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5em;
-  font-weight: bold;
-}
-
-.nav-links a {
-  color: #fcfbff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #f4d03f;
-}
-
-/* Sign Up Button */
-.signup-btn {
-  background: #fca311;
-  color: #003049;
-  padding: 0.5em 1.5em;
-  border-radius: 0.4rem;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.signup-btn:hover {
-  background: #f28b0c;
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #fcfbff;
+    }
 }
 body {
   font-family: Arial, sans-serif;
@@ -132,7 +162,7 @@ ul li {
 }
 
 table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   margin-top: 20px;
 }
@@ -186,60 +216,87 @@ footer a:hover {
       margin: 10px 0;
   }
 }
+
+/* Make navbar padding smaller on smaller screens */
 @media (max-width: 868px) {
   .navbar {
     padding: 0.5em;
   }
+}
 
-  /* Hide nav links on mobile */
+/* Nav Links - Always visible above 700px */
+.nav-links {
+  display: flex; /* Always visible in row layout above 700px */
+  flex-direction: row;
+  position: static;
+  background-color: transparent;
+  width: auto;
+  text-align: left;
+}
+
+/* Show links in column layout when navbar is toggled (for small screens) */
+.navbar.active .nav-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #003049;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links a {
+  padding: 1em;
+  text-decoration: none; /* Removes underline */
+  border-top: none; /* Removes any border */
+}
+
+/* 🔥 Hamburger Menu (Initially Hidden) */
+.hamburger {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  color: #fcfbff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+}
+
+/* ✅ Show hamburger below 700px (including ultra-small screens) */
+@media (max-width: 700px) {
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #003049;
-    width: 100%;
-    text-align: center;
+    display: none; /* Hide links by default */
+  }
+  
+  .hamburger {
+    display: block !important; /* Force show hamburger */
   }
 
-  /* Show links when navbar is toggled */
+  /* Show links only when navbar is active */
   .navbar.active .nav-links {
     display: flex;
   }
+}
 
-  .nav-links a {
-    padding: 1em;
-    border-top: 1px solid #ddd;
-  }
-
-  /* Hamburger Menu */
+/* ✅ Extra Fix: Ensure Hamburger Always Visible Below 400px */
+@media (max-width: 400px) {
   .hamburger {
-    display: block;
-    cursor: pointer;
-    color: #fcfbff;
-    font-size: 2rem;
-    background: none;
-    border: none;
-  }
-
-  /* Adjust the Sign Up Button */
-  .signup-btn {
-    padding: 0.5em 1.2em;
-    font-size: 1rem;
+    display: block !important; /* Force visibility on ultra-small screens */
   }
 }
 
-/* Hamburger Icon (visible on mobile) */
-.hamburger {
-  display: none;
+/* Adjust the Sign Up Button */
+.signup-btn {
+  padding: 0.5em 1.2em;
+  font-size: 1rem;
 }
 
-@media (max-width: 868px) {
-  .hamburger {
-    display: block;
-  }
+/* Quiz Button */
+.quiz-container {
+  text-align: center;
+  margin-top: 20px;
 }
+
 /* Quiz Button */
 .quiz-container {
   text-align: center;
@@ -262,4 +319,73 @@ footer a:hover {
 }
 .class1{
   padding-top: 2em;
+}
+
+
+
+
+
+
+
+ /* Navbar Styling */
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 2em;
+  background-color: #003049;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* Navbar Links - Default (Desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #fcfbff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f4d03f;
+}
+
+@media (max-width: 868px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #003049;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: white;
+  }
 }

@@ -1,30 +1,32 @@
 const questions = [
     {
-      question: "Which of the following is an essential step in soil preparation for farming?",
-      options: ["Watering the soil", "Clearing the land", "Planting seeds", "Adding fertilizers"],
-      answer: 1
-    },
-    {
-      question: "What is the main purpose of soil testing in farming?",
-      options: ["Determine soil pH and nutrient content", "Choose the right seeds", "Plan irrigation", "Add organic matter"],
+      question: "Which season in India is characterized by heavy rainfall and warm temperatures?",
+      options: ["Kharif Season", "Rabi Season", "Zaid Season", "Winter Season"],
       answer: 0
     },
     {
-      question: "Which method is best for planting crops like maize, melons, and pumpkins?",
-      options: ["Drilling Method", "Hill Sowing Method", "Broadcasting Method", "Check Row Planting"],
+      question: "Which crop is primarily grown during the Kharif season?",
+      options: ["Wheat", "Rice", "Mustard", "Chickpea"],
       answer: 1
     },
     {
-      question: "Which sowing method is considered the most labor-intensive?",
-      options: ["Drilling Method", "Dibbling Method", "Broadcasting Method", "Transplanting Method"],
-      answer: 3
+      question: "Which season in India is mainly for crops requiring cooler temperatures and irrigation?",
+      options: ["Kharif Season", "Rabi Season", "Zaid Season", "Summer Season"],
+      answer: 1
     },
     {
-      question: "Which of the following is a benefit of mulching in farming?",
-      options: ["Prevents soil erosion", "Improves irrigation", "Regulates soil temperature", "All of the above"],
-      answer: 3
+      question: "What is the primary benefit of crop rotation in India?",
+      options: ["Increases market demand", "Improves soil fertility", "Reduces crop diversity", "Decreases water usage"],
+      answer: 1
+    },
+    {
+      question: "Which crop rotation system involves growing rice followed by wheat?",
+      options: ["Legume-Cereal Rotation", "Rice-Wheat Rotation", "Cotton-Soybean Rotation", "Maize-Pulses Rotation"],
+      answer: 1
     }
-  ];
+];
+
+  
   const user_id = 1; // Replace this with dynamic user ID if needed
 let currentQuestionIndex = 0;
 let selectedAnswers = Array(questions.length).fill(null);

@@ -1,30 +1,33 @@
 const questions = [
     {
-      question: "Which of the following is an essential step in soil preparation for farming?",
-      options: ["Watering the soil", "Clearing the land", "Planting seeds", "Adding fertilizers"],
-      answer: 1
+        question: "Which season is characterized by harvesting crops like rice, cotton, and maize in India?",
+        options: ["Kharif Season", "Rabi Season", "Zaid Season", "Summer Season"],
+        answer: 0
     },
     {
-      question: "What is the main purpose of soil testing in farming?",
-      options: ["Determine soil pH and nutrient content", "Choose the right seeds", "Plan irrigation", "Add organic matter"],
-      answer: 0
+        question: "What is the primary method of storing wheat after harvesting?",
+        options: ["Airtight bins or silos", "Open-air storage", "Cold storage", "Plastic bags"],
+        answer: 0
     },
     {
-      question: "Which method is best for planting crops like maize, melons, and pumpkins?",
-      options: ["Drilling Method", "Hill Sowing Method", "Broadcasting Method", "Check Row Planting"],
-      answer: 1
+        question: "Which of the following crops is harvested when the grains are fully matured and the plants dry out in the Rabi season?",
+        options: ["Rice", "Wheat", "Cotton", "Maize"],
+        answer: 1
     },
     {
-      question: "Which sowing method is considered the most labor-intensive?",
-      options: ["Drilling Method", "Dibbling Method", "Broadcasting Method", "Transplanting Method"],
-      answer: 3
+        question: "Which of the following is a challenge faced during crop storage in India?",
+        options: ["Temperature control", "High humidity", "Pest infestations", "All of the above"],
+        answer: 3
     },
     {
-      question: "Which of the following is a benefit of mulching in farming?",
-      options: ["Prevents soil erosion", "Improves irrigation", "Regulates soil temperature", "All of the above"],
-      answer: 3
+        question: "What is the best storage condition for root vegetables like potatoes and carrots?",
+        options: ["Refrigerated environment", "In sand or soil in a cool, dry place", "Plastic bags", "In airtight containers"],
+        answer: 1
     }
-  ];
+];
+
+
+  
   const user_id = 1; // Replace this with dynamic user ID if needed
 let currentQuestionIndex = 0;
 let selectedAnswers = Array(questions.length).fill(null);

@@ -1,28 +1,28 @@
 const questions = [
     {
-      question: "Which of the following is an essential step in soil preparation for farming?",
-      options: ["Watering the soil", "Clearing the land", "Planting seeds", "Adding fertilizers"],
-      answer: 1
+        question: "Which of the following is a key factor to consider when selecting seeds for farming?",
+        options: ["Soil Type", "Water Quality", "Climate Suitability", "Seed Packaging"],
+        answer: 2
     },
     {
-      question: "What is the main purpose of soil testing in farming?",
-      options: ["Determine soil pH and nutrient content", "Choose the right seeds", "Plan irrigation", "Add organic matter"],
-      answer: 0
+        question: "What is the minimum germination rate that is recommended for better plant establishment?",
+        options: ["50%", "70%", "80%", "90%"],
+        answer: 2
     },
     {
-      question: "Which method is best for planting crops like maize, melons, and pumpkins?",
-      options: ["Drilling Method", "Hill Sowing Method", "Broadcasting Method", "Check Row Planting"],
-      answer: 1
+        question: "Which type of soil is suitable for growing peanuts, carrots, and watermelon?",
+        options: ["Loamy Soil", "Sandy Soil", "Clayey Soil", "Peaty Soil"],
+        answer: 1
     },
     {
-      question: "Which sowing method is considered the most labor-intensive?",
-      options: ["Drilling Method", "Dibbling Method", "Broadcasting Method", "Transplanting Method"],
-      answer: 3
+        question: "Which type of seed is naturally pollinated and can be reused for future crops?",
+        options: ["Hybrid Seeds", "Heirloom Seeds", "GM Seeds", "Open-Pollinated Seeds"],
+        answer: 3
     },
     {
-      question: "Which of the following is a benefit of mulching in farming?",
-      options: ["Prevents soil erosion", "Improves irrigation", "Regulates soil temperature", "All of the above"],
-      answer: 3
+        question: "Which seed treatment method is used to protect seeds from fungal diseases?",
+        options: ["Fungicide Treatment", "Insecticide Treatment", "Biofertilizer Coating", "Seed Priming"],
+        answer: 0
     }
   ];
   const user_id = 1; // Replace this with dynamic user ID if needed

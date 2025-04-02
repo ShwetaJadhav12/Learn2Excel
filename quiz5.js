@@ -1,30 +1,31 @@
 const questions = [
     {
-      question: "Which of the following is an essential step in soil preparation for farming?",
-      options: ["Watering the soil", "Clearing the land", "Planting seeds", "Adding fertilizers"],
+      question: "What is the main purpose of irrigation in farming?",
+      options: ["Increase crop yield", "Provide water to plants", "Improve soil quality", "Reduce labor costs"],
       answer: 1
     },
     {
-      question: "What is the main purpose of soil testing in farming?",
-      options: ["Determine soil pH and nutrient content", "Choose the right seeds", "Plan irrigation", "Add organic matter"],
+      question: "Which of the following irrigation methods is most water-efficient?",
+      options: ["Flood irrigation", "Drip irrigation", "Sprinkler irrigation", "Canal irrigation"],
+      answer: 1
+    },
+    {
+      question: "What is a major challenge of surface irrigation?",
+      options: ["Uneven water distribution", "High installation cost", "Limited water availability", "Complex maintenance"],
       answer: 0
     },
     {
-      question: "Which method is best for planting crops like maize, melons, and pumpkins?",
-      options: ["Drilling Method", "Hill Sowing Method", "Broadcasting Method", "Check Row Planting"],
-      answer: 1
+      question: "Which irrigation method mimics rainfall by spraying water through pipes?",
+      options: ["Drip irrigation", "Surface irrigation", "Sprinkler irrigation", "Subsurface irrigation"],
+      answer: 2
     },
     {
-      question: "Which sowing method is considered the most labor-intensive?",
-      options: ["Drilling Method", "Dibbling Method", "Broadcasting Method", "Transplanting Method"],
-      answer: 3
-    },
-    {
-      question: "Which of the following is a benefit of mulching in farming?",
-      options: ["Prevents soil erosion", "Improves irrigation", "Regulates soil temperature", "All of the above"],
-      answer: 3
+      question: "What is the advantage of using rainwater harvesting in irrigation?",
+      options: ["Reduces dependence on groundwater", "Increases crop yield", "Requires no maintenance", "Decreases water usage"],
+      answer: 0
     }
   ];
+  
   const user_id = 1; // Replace this with dynamic user ID if needed
 let currentQuestionIndex = 0;
 let selectedAnswers = Array(questions.length).fill(null);

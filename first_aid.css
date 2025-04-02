@@ -1,6 +1,9 @@
+
+/* General Styles */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #ddf3e4;
     margin: 0;
     padding: 20px;
     color: #333;
@@ -11,35 +14,41 @@ h1 {
     text-align: center;
     color: #2c5f2d;
     font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
+/* Card Container Styles */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 2rem;
+    padding: 2rem;
 }
 
+/* Individual Card Styles */
 .card {
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Card Icon Styles */
 .card-icon {
     font-size: 40px;
     margin-bottom: 10px;
     color: #4caf50;
 }
 
+/* Card Title Styles */
 .card-title {
     font-size: 20px;
     font-weight: bold;
@@ -47,6 +56,7 @@ h1 {
     color: #2c5f2d;
 }
 
+/* Card Description Styles */
 .card-description {
     color: #666;
     font-size: 16px;
@@ -106,3 +116,333 @@ h1 {
 .close-btn:hover {
     background: #c62828;
 }
+
+
+
+
+
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ddf3e4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #2c5f2d;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Card Container Styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 100px; /* Ensure cards aren't hidden behind navbar */
+}
+
+/* Individual Card Styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Icon Styles */
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #4caf50;
+}
+
+/* Card Title Styles */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c5f2d;
+}
+
+/* Card Description Styles */
+.card-description {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e53935; /* Red background for better visibility */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px; /* Increased size for better visibility */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adding shadow for better visibility */
+}
+
+.close-btn:hover {
+    background: #c62828; /* Darker red when hovered */
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+.close-btn:focus {
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 868px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Stack the cards vertically on smaller screens */
+    }
+
+    .card {
+        padding: 15px; /* Smaller padding on mobile */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size on smaller screens */
+    }
+
+    
+    /* Adjust card titles and descriptions for smaller screens */
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+}
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    background-color: #003049;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo Section */
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navbar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #eae2b7;
+  }
+  
+  .navbar .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .navbar .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+  }
+  
+  .navbar .logo a:hover .logo-text {
+    color: #dfe9e1;
+  }
+  
+  /* Navbar Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2em;
+  }
+  
+  .nav-links a {
+    color: #fcfbff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #f4d03f;
+  }
+  
+  /* Signup Button */
+  .signup-btn {
+    background: #fca311;
+    color: #003049;
+    padding: 0.5em 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background: #f28b0c;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fcfbff;
+    cursor: pointer;
+  }
+  @media (max-width: 868px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #003049;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #fcfbff;
+    }
+}
+
+ /* Navbar Styling */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 2em;
+    background-color: #003049;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  
+  /* Navbar Links - Default (Desktop) */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: #fcfbff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f4d03f;
+  }
+  
+  @media (max-width: 868px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #003049;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+  
+    /* Show menu when active */
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+    }
+  }

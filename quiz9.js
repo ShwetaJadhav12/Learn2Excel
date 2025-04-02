@@ -1,30 +1,34 @@
 const questions = [
     {
-      question: "Which of the following is an essential step in soil preparation for farming?",
-      options: ["Watering the soil", "Clearing the land", "Planting seeds", "Adding fertilizers"],
-      answer: 1
+        question: "What technology is commonly used in Precision Agriculture to optimize farming practices?",
+        options: ["GPS", "Drone", "IoT", "All of the above"],
+        answer: 3
     },
     {
-      question: "What is the main purpose of soil testing in farming?",
-      options: ["Determine soil pH and nutrient content", "Choose the right seeds", "Plan irrigation", "Add organic matter"],
-      answer: 0
+        question: "Which technique is most suitable for growing high-value crops in urban areas?",
+        options: ["Hydroponics", "Vertical Farming", "Aquaponics", "Genetically Modified Organisms (GMOs)"],
+        answer: 1
     },
     {
-      question: "Which method is best for planting crops like maize, melons, and pumpkins?",
-      options: ["Drilling Method", "Hill Sowing Method", "Broadcasting Method", "Check Row Planting"],
-      answer: 1
+        question: "Which of the following is a key feature of Hydroponics?",
+        options: ["Growing plants without soil", "Using only organic fertilizers", "Requires traditional tillage", "Uses more water than traditional farming"],
+        answer: 0
     },
     {
-      question: "Which sowing method is considered the most labor-intensive?",
-      options: ["Drilling Method", "Dibbling Method", "Broadcasting Method", "Transplanting Method"],
-      answer: 3
+        question: "In Aquaponics, what is the role of fish in the system?",
+        options: ["Provide nutrients to plants", "Help filter the water for plants", "Both of the above", "None of the above"],
+        answer: 2
     },
     {
-      question: "Which of the following is a benefit of mulching in farming?",
-      options: ["Prevents soil erosion", "Improves irrigation", "Regulates soil temperature", "All of the above"],
-      answer: 3
+        question: "What is one of the benefits of using Genetically Modified Organisms (GMOs) in farming?",
+        options: ["Higher yields and efficiency", "Increased soil erosion", "Increased pesticide use", "Lower nutrient content"],
+        answer: 0
     }
-  ];
+];
+
+
+
+  
   const user_id = 1; // Replace this with dynamic user ID if needed
 let currentQuestionIndex = 0;
 let selectedAnswers = Array(questions.length).fill(null);

@@ -1,30 +1,32 @@
 const questions = [
     {
-      question: "Which of the following is an essential step in soil preparation for farming?",
-      options: ["Watering the soil", "Clearing the land", "Planting seeds", "Adding fertilizers"],
+      question: "What is the primary method used to control aphids in farming and gardening?",
+      options: ["Crop Rotation", "Biological Control", "Chemical Pesticides", "Watering Techniques"],
       answer: 1
     },
     {
-      question: "What is the main purpose of soil testing in farming?",
-      options: ["Determine soil pH and nutrient content", "Choose the right seeds", "Plan irrigation", "Add organic matter"],
+      question: "Which of the following is a common bacterial disease affecting plants in India?",
+      options: ["Powdery Mildew", "Bacterial Wilt", "Leaf Blight", "Rusts"],
+      answer: 1
+    },
+    {
+      question: "Which natural remedy is often used for pest control in organic farming?",
+      options: ["Neem Oil", "Chemical Pesticides", "Insecticidal Soap", "Traps"],
       answer: 0
     },
     {
-      question: "Which method is best for planting crops like maize, melons, and pumpkins?",
-      options: ["Drilling Method", "Hill Sowing Method", "Broadcasting Method", "Check Row Planting"],
+      question: "What is a key component of Integrated Pest and Disease Management (IPM)?",
+      options: ["Heavy pesticide use", "Crop rotation", "Increased irrigation", "Chemical fertilizers"],
       answer: 1
     },
     {
-      question: "Which sowing method is considered the most labor-intensive?",
-      options: ["Drilling Method", "Dibbling Method", "Broadcasting Method", "Transplanting Method"],
-      answer: 3
-    },
-    {
-      question: "Which of the following is a benefit of mulching in farming?",
-      options: ["Prevents soil erosion", "Improves irrigation", "Regulates soil temperature", "All of the above"],
+      question: "What is the purpose of using crop rotation in pest and disease management?",
+      options: ["To confuse pests", "To increase crop yield", "To improve soil quality", "To prevent pest population buildup"],
       answer: 3
     }
   ];
+  
+  
   const user_id = 1; // Replace this with dynamic user ID if needed
 let currentQuestionIndex = 0;
 let selectedAnswers = Array(questions.length).fill(null);

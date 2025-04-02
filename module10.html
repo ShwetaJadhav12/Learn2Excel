@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming & Gardening First Aid</title>
+    <link rel="stylesheet" href="module10.css">
+</head>
+<body>
+    <!-- <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <img src="logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">First Aid Guide</span>
+            </a>
+        </div>
+        <button class="hamburger">☰</button>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="signup-btn">Sign Up</a></li>
+        </ul>
+    </nav> -->
+
+    <div class="container">
+        <h1>Farming & Gardening First Aid</h1>
+        <button class="btn" onclick="showAdvice('cuts')">Cuts & Wounds</button>
+        <button class="btn" onclick="showAdvice('bites')">Insect Bites</button>
+        <button class="btn" onclick="showAdvice('sunburn')">Sunburn</button>
+        <button class="btn" onclick="showAdvice('sprains')">Sprains & Strains</button>
+        
+        <div id="advice" class="advice"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Farming First Aid. All Rights Reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <script>
+        function showAdvice(type) {
+            const adviceBox = document.getElementById('advice');
+            let adviceText = '';
+            
+            switch(type) {
+                case 'cuts':
+                    adviceText = "Clean with water, apply antiseptic, and cover with a bandage.";
+                    break;
+                case 'bites':
+                    adviceText = "Wash the area, apply ice, and use antihistamine cream if needed.";
+                    break;
+                case 'sunburn':
+                    adviceText = "Move to shade, apply aloe vera, and drink plenty of water.";
+                    break;
+                case 'sprains':
+                    adviceText = "Rest, ice the area, compress, and elevate the limb.";
+                    break;
+            }
+            
+            adviceBox.innerHTML = `<strong>Advice:</strong> ${adviceText}`;
+            adviceBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
