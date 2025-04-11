@@ -1,0 +1,246 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fef7f0;
+}
+
+/* Logo Section Styling */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+    height: 60px; /* Fixed navbar height */
+}
+
+.navbar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;  
+}
+
+.navbar .logo-img {
+    height: 40px; /* Consistent logo size */
+    width: auto;  
+}
+
+.navbar .logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #eae2b7;  
+    margin-left: 11px;  
+    transition: color 0.4s ease;
+}
+
+.navbar .logo a:hover .logo-text {
+    color: #dfe9e1;  
+}
+
+.navbar .logo a:hover .logo-img {
+    opacity: 0.8;  
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* More stable padding */
+    background-color: #003049;
+    height: 60px; /* Fixed navbar height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fcfbff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links li a:not(.signup-btn):hover {
+    color: #f4d03f;
+}
+
+.signup-btn {
+    background: #fca311;
+    color: #003049;
+    padding: 0.6rem 1.2rem; /* Balanced padding */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+    background: #ffba49;
+    color: #241e60;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; /* Flexible height on mobile */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .signup-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Header Styling */
+main h1 {
+    text-align: center;
+    padding: 20px;
+    background: #631b19;
+    color: white;
+    font-size: 4rem;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 100rem;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+/* Ensure card links are styled properly */
+.card-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Card Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Card Styling */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(253, 58, 105, 0.5);
+}
+
+/* Card Image Styling */
+.card img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+/* Card Title Styling */
+.card h2 {
+    color: #631b19;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Card Description */
+.card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 600px) {
+    .card img {
+        height: 140px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+/*Quiz*/
+.quiz-container {
+    display: flex;
+    justify-content: center; /* Centers the button */
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.quiz-btn {
+    background: #ad1e1e;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+    text-align: center;
+}
+
+/* Hover Effect */
+.quiz-btn:hover {
+    background: #631b19;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #003049;
+    color: white;
+    padding: 15px;
+}
+
+footer a {
+    color: #ff7a18;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+

@@ -8,27 +8,30 @@
 </head>
 <body>
     
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">
-                <img class="logo-img" src="logo.png" alt="Logo">
-                <span class="logo-text">Learn2Excel</span>
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+    <header>
+        <nav class="navbar">
+            <!-- Logo Section (Image + Text) -->
+            <div class="logo">
+                <a href="#home">
+                    <img src="logo.png" alt="Learn2Excel Logo" class="logo-img">
+                    <span class="logo-text">Learn2Excel</span>
+                </a>
+            </div>
     
-        <!-- User Info Section -->
-        <div id="nav-user">
-            <button class="signup-btn" id="signup-btn">Sign Up</button>
-        </div>
-    
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-    </nav>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="login-link">Login</a>
+                <button class="signup-btn"><a href="signUp.html">Sign Up</a></button>
+                <button class="hamburger">☰</button>
+            </div>
+        </nav>
+    </header>
     <!-- Top Banner with Parallax Effect -->
     <div class="top-banner">
         <div class="banner-overlay">

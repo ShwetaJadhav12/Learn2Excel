@@ -1,3 +1,17 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (!hamburger || !navLinks) {
+        console.error("Navbar elements not found!");
+        return;
+    }
+
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+});
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
@@ -5,20 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburger.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     });
-});
-document.addEventListener("DOMContentLoaded", () => {
-    let user = localStorage.getItem("user"); // Get user from local storage
-
-    if (user) {
-        // If user is logged in, show profile icon & name instead of Sign Up button
-        document.getElementById("nav-user").innerHTML = `
-            <div class="user-info">
-                <img src="profile-icon.png" alt="User" class="profile-icon">
-                <span>${user}</span>
-                <button onclick="logout()" class="logout-btn">Logout</button>
-            </div>
-        `;
-    }
 });
 
 function logout() {

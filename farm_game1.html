@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farming Drag & Drop Game</title>
-    <link rel="stylesheet" href="farm_game1.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farming Puzzle Adventure</title>
+    <link rel="stylesheet" href="farm_game1.css" />
 </head>
 <body>
-    <h1>Farming Drag & Drop Game</h1>
-    <p>Drag the correct items to their respective categories!</p>
+    <header>
+        <h1>🌾 Farming Puzzle Adventure</h1>
+        <p>Help Farmer Ravi grow his first rice crop by solving fun and interactive challenges!</p>
+    </header>
 
-    <div class="game-container">
-        <!-- Drag items (Seeds, Irrigation, Storage) -->
-        <div class="items">
-            <h2>Items</h2>
-            <div id="seed-wheat" class="draggable" draggable="true">🌾 Wheat Seed</div>
-            <div id="seed-rice" class="draggable" draggable="true">🌱 Rice Seed</div>
-            <div id="irrigation-drip" class="draggable" draggable="true">🚰 Drip Irrigation</div>
-            <div id="irrigation-flood" class="draggable" draggable="true">🌊 Flood Irrigation</div>
-            <div id="storage-silo" class="draggable" draggable="true">🏠 Silo Storage</div>
-            <div id="storage-warehouse" class="draggable" draggable="true">🏢 Warehouse</div>
+    <section class="game-container">
+        <div id="level-display">Level: 1</div>
+        <div id="task-container">
+            <!-- Dynamic content will be injected here -->
         </div>
-
-        <!-- Drop Zones -->
-        <div class="drop-zones">
-            <div class="drop-zone" id="climate-zone">
-                <h2>🌦️ Climate</h2>
-                <p>Drop a seed here!</p>
-            </div>
-            <div class="drop-zone" id="irrigation-zone">
-                <h2>💧 Irrigation</h2>
-                <p>Drop an irrigation method here!</p>
-            </div>
-            <div class="drop-zone" id="storage-zone">
-                <h2>🏠 Storage</h2>
-                <p>Drop a storage method here!</p>
-            </div>
+        <div class="actions">
+            <button id="hint-btn">💡 Get Hint</button>
+            <button id="check-btn">✅ Check Answer</button>
         </div>
-    </div>
+        <div id="feedback"></div>
+    </section>
 
-    <button id="check-result">Check Result</button>
-    <div id="result"></div>
+    <footer>
+        <p>🌿 Created to promote smart farming for India</p>
+    </footer>
 
     <script src="farm_game1.js"></script>
 </body>
