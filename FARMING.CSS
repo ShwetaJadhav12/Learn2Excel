@@ -689,3 +689,36 @@ body {
 .login-link:hover {
     color: #f4d03f;
 }
+/* Base styles */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Mobile view: hide nav by default */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      font-size: 1.8rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+  }
+  
